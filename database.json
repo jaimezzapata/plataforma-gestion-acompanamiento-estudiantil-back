@@ -1,0 +1,163 @@
+{
+  "usuarios": [
+    {
+      "id": 101,
+      "nombre": "Jaime Zapata",
+      "correo": "jaime.zapata@cesde.edu.co",
+      "rol": "DOCENTE",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": 102,
+      "nombre": "Andrea Gómez",
+      "correo": "andrea.gomez@estudiante.edu.co",
+      "rol": "ESTUDIANTE",
+      "estado": "ACTIVO"
+    },
+    {
+      "id": 103,
+      "nombre": "Carlos Restrepo",
+      "correo": "carlos.restrepo@familiar.co",
+      "rol": "FAMILIAR",
+      "estado": "ACTIVO"
+    }
+  ],
+  "estudiantes": [
+    {
+      "id": 202,
+      "usuario_id": 102,
+      "programa": "Desarrollo de Software",
+      "semestre": 5
+    },
+    {
+      "id": 204,
+      "usuario_id": 104,
+      "programa": "Diseño Gráfico",
+      "semestre": 3
+    }
+  ],
+  "docentes": [
+    {
+      "id": 301,
+      "usuario_id": 101,
+      "especialidad": "Front-end",
+      "departamento": "Sistemas"
+    }
+  ],
+  "familiares": [
+    {
+      "id": 403,
+      "usuario_id": 103,
+      "parentesco": "Padre",
+      "telefono": "3001234567"
+    }
+  ],
+
+  "perfiles": [
+    {
+      "id": 501,
+      "estudiante_id": 202,
+      "resumen": "Desarrolladora Front-end junior.",
+      "intereses": "UX/UI, Open Source"
+    }
+  ],
+  "habilidades": [
+    {
+      "id": 601,
+      "perfil_id": 501,
+      "nombre": "React JS",
+      "nivel": "Avanzado",
+      "tipo": "técnica"
+    }
+  ],
+
+  "vinculos": [
+    { "id": 901, "familiar_id": 403, "estudiante_id": 202, "autorizado": true }
+  ],
+
+  "materias": [
+    {
+      "id": 1001,
+      "nombre": "Desarrollo Front-end",
+      "codigo": "FE001",
+      "docente_id": 301
+    },
+    {
+      "id": 1002,
+      "nombre": "Spring Boot Avanzado",
+      "codigo": "SB002",
+      "docente_id": 301
+    }
+  ],
+  "grupos": [
+    { "id": 1101, "nombre": "G5-A", "materia_id": 1001, "semestre": 5 }
+  ],
+  "notas": [
+    {
+      "id": 1201,
+      "valor": 4.5,
+      "tipoEvaluacion": "Parcial",
+      "estudiante_id": 202,
+      "materia_id": 1001,
+      "grupo_id": 1101
+    },
+    {
+      "id": 1202,
+      "valor": 2.8,
+      "tipoEvaluacion": "Quiz",
+      "estudiante_id": 202,
+      "materia_id": 1001,
+      "grupo_id": 1101
+    }
+  ],
+
+  "asistencias": [
+    {
+      "id": 1301,
+      "fecha": "2024-09-05",
+      "estado": "PRESENTE",
+      "estudiante_id": 202,
+      "grupo_id": 1101
+    },
+    {
+      "id": 1302,
+      "fecha": "2024-09-12",
+      "estado": "AUSENTE",
+      "estudiante_id": 202,
+      "grupo_id": 1101
+    }
+  ],
+  "necesidades": [
+    {
+      "id": 1501,
+      "tipo": "ACADÉMICO",
+      "descripcion": "Dificultad en Spring Boot.",
+      "estudiante_id": 202,
+      "estado": "EN ATENCIÓN"
+    }
+  ],
+  "profesionales": [
+    { "id": 1401, "nombre": "Maria Elena", "area": "Psicología" }
+  ],
+  "seguimientos": [
+    {
+      "id": 1601,
+      "necesidad_id": 1501,
+      "fecha": "2024-09-17",
+      "descripcion": "Primera sesión de tutoría."
+    }
+  ],
+  "categorias-necesidad": [
+    { "id": 1801, "nombre": "Emocional" },
+    { "id": 1802, "nombre": "Académico" }
+  ],
+
+  "accesos_familiar": [
+    {
+      "id": 1701,
+      "familiar_id": 403,
+      "fecha_acceso": "2024-09-25T18:30:00Z",
+      "accion_realizada": "Consulta de notas"
+    }
+  ]
+}
