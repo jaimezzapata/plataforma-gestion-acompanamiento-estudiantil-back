@@ -55,19 +55,22 @@ El servidor se ejecutará en `http://localhost:3000`
 ### Usuarios
 ```json
 {
-  "id": 101,
+  "id": 1,
   "nombre": "Jaime Zapata",
+  "documento": "12345678",
   "correo": "jaime.zapata@cesde.edu.co",
-  "rol": "DOCENTE", // DOCENTE | ESTUDIANTE | FAMILIAR
-  "estado": "ACTIVO"  // ACTIVO | INACTIVO
+  "contraseña": "hashed_password_123",
+  "tipo_usuario": "PROFESOR",
+  "telefono": "3001234567",
+  "estado": "ACTIVO",
+  "fecha_registro": "2025-01-15"
 }
 ```
 
 ### Estudiantes
 ```json
 {
-  "id": 202,
-  "usuario_id": 102,
+  "usuario_id": 2,
   "programa": "Desarrollo de Software",
   "semestre": 5
 }
@@ -76,41 +79,61 @@ El servidor se ejecutará en `http://localhost:3000`
 ### Docentes
 ```json
 {
-  "id": 301,
-  "usuario_id": 101,
-  "especialidad": "Front-end",
-  "departamento": "Sistemas"
+  "usuario_id": 1,
+  "especialidad": "Desarrollo de Software",
+  "departamento": "Tecnología"
 }
 ```
 
 ### Familiares
 ```json
 {
-  "id": 403,
-  "usuario_id": 103,
+  "usuario_id": 3,
   "parentesco": "Padre",
-  "telefono": "3001234567"
+  "estudiante_asociado_id": 2
+}
+```
+
+### Profesionales
+```json
+{
+  "usuario_id": 4,
+  "area_especialidad": "Psicología Educativa",
+  "titulo": "Psicóloga"
 }
 ```
 
 ### Perfiles
 ```json
 {
-  "id": 501,
-  "estudiante_id": 202,
-  "resumen": "Desarrolladora Front-end junior.",
-  "intereses": "UX/UI, Open Source"
-}
-```
-
-### Habilidades
-```json
-{
-  "id": 601,
-  "perfil_id": 501,
-  "nombre": "React JS",
-  "nivel": "Avanzado", // Básico | Intermedio | Avanzado
-  "tipo": "técnica"     // técnica | blanda
+  "id": 1,
+  "usuario_id": 1,
+  "fecha_nacimiento": "1985-05-20",
+  "lugar_nacimiento": "Medellín, Antioquia",
+  "direccion": "Carrera 80 #25-10",
+  "estrato": 5,
+  "estado_civil": "Casado(a)",
+  "eps": "SURA",
+  "contacto_emergencia": {
+    "nombre": "Laura Pérez",
+    "telefono": "3012345678",
+    "parentesco": "Esposa"
+  },
+  "formacion_academica": [
+    {
+      "institucion": "Universidad de Antioquia",
+      "titulo": "Ingeniero de Sistemas",
+      "año_graduacion": 2008
+    }
+  ],
+  "experiencia_laboral": [],
+  "habilidades_tecnicas": [],
+  "habilidades_blandas": [],
+  "idiomas": [],
+  "objetivos_profesionales": "",
+  "intereses": [],
+  "logros_reconocimientos": [],
+  "fecha_actualizacion": "2025-09-30"
 }
 ```
 
@@ -147,12 +170,14 @@ El servidor se ejecutará en `http://localhost:3000`
 ### Notas
 ```json
 {
-  "id": 1201,
+  "id": 1,
+  "profesor_id": 1,
+  "estudiante_id": 2,
+  "materia": "Desarrollo Web Frontend",
   "valor": 4.5,
-  "tipoEvaluacion": "Parcial",
-  "estudiante_id": 202,
-  "materia_id": 1001,
-  "grupo_id": 1101
+  "tipo_evaluacion": "Parcial 1",
+  "fecha": "2025-09-15",
+  "observaciones": "Excelente manejo de React y componentes"
 }
 ```
 **Nota**: Solo los docentes pueden crear/editar notas.
@@ -160,11 +185,13 @@ El servidor se ejecutará en `http://localhost:3000`
 ### Asistencias
 ```json
 {
-  "id": 1301,
-  "fecha": "2024-09-05",
-  "estado": "PRESENTE", // PRESENTE | AUSENTE | TARDANZA
-  "estudiante_id": 202,
-  "grupo_id": 1101
+  "id": 1,
+  "profesor_id": 1,
+  "estudiante_id": 2,
+  "materia": "Desarrollo Web Frontend",
+  "fecha": "2025-09-25",
+  "estado": "PRESENTE",
+  "observaciones": ""
 }
 ```
 **Nota**: Solo los docentes pueden registrar asistencias.
@@ -177,15 +204,6 @@ El servidor se ejecutará en `http://localhost:3000`
   "descripcion": "Dificultad en Spring Boot.",
   "estudiante_id": 202,
   "estado": "EN ATENCIÓN" // PENDIENTE | EN ATENCIÓN | RESUELTA
-}
-```
-
-### Profesionales
-```json
-{
-  "id": 1401,
-  "nombre": "Maria Elena",
-  "area": "Psicología"
 }
 ```
 
