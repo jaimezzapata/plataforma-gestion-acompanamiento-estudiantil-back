@@ -8,8 +8,6 @@
       "contraseña": "hashed_password_123",
       "tipo_usuario": "PROFESOR",
       "telefono": "3001234567",
-      "especialidad": "Desarrollo de Software",
-      "departamento": "Tecnología",
       "estado": "ACTIVO",
       "fecha_registro": "2025-01-15"
     },
@@ -21,9 +19,6 @@
       "contraseña": "hashed_password_456",
       "tipo_usuario": "ESTUDIANTE",
       "telefono": "3009876543",
-      "programa": "Desarrollo de Software",
-      "semestre": 5,
-      "profesor_id": 1,
       "estado": "ACTIVO",
       "fecha_registro": "2025-02-10"
     },
@@ -35,8 +30,6 @@
       "contraseña": "hashed_password_789",
       "tipo_usuario": "FAMILIAR",
       "telefono": "3005566778",
-      "parentesco": "Padre",
-      "estudiante_asociado_id": 2,
       "estado": "ACTIVO",
       "fecha_registro": "2025-02-15"
     },
@@ -48,8 +41,6 @@
       "contraseña": "hashed_password_321",
       "tipo_usuario": "PROFESIONAL",
       "telefono": "3007788990",
-      "area_especialidad": "Psicología Educativa",
-      "titulo": "Psicóloga",
       "estado": "ACTIVO",
       "fecha_registro": "2025-01-20"
     }
@@ -58,7 +49,37 @@
   "perfiles": [
     {
       "id": 1,
-      "estudiante_id": 2,
+      "usuario_id": 1,
+      "fecha_nacimiento": "1985-05-20",
+      "lugar_nacimiento": "Medellín, Antioquia",
+      "direccion": "Carrera 80 #25-10",
+      "estrato": 5,
+      "estado_civil": "Casado(a)",
+      "eps": "SURA",
+      "contacto_emergencia": {
+        "nombre": "Laura Pérez",
+        "telefono": "3012345678",
+        "parentesco": "Esposa"
+      },
+      "formacion_academica": [
+        {
+          "institucion": "Universidad de Antioquia",
+          "titulo": "Ingeniero de Sistemas",
+          "año_graduacion": 2008
+        }
+      ],
+      "experiencia_laboral": [],
+      "habilidades_tecnicas": [],
+      "habilidades_blandas": [],
+      "idiomas": [],
+      "objetivos_profesionales": "",
+      "intereses": [],
+      "logros_reconocimientos": [],
+      "fecha_actualizacion": "2025-09-30"
+    },
+    {
+      "id": 2,
+      "usuario_id": 2,
       "fecha_nacimiento": "2000-03-15",
       "lugar_nacimiento": "Medellín, Antioquia",
       "direccion": "Calle 45 #67-89, Barrio Laureles",
@@ -122,6 +143,92 @@
         "Participación en Hackathon MedellínTech 2023"
       ],
       "fecha_actualizacion": "2025-09-30"
+    },
+    {
+      "id": 3,
+      "usuario_id": 3,
+      "fecha_nacimiento": "1975-10-10",
+      "lugar_nacimiento": "Bogotá, Cundinamarca",
+      "direccion": "Calle 45 #67-89, Barrio Laureles",
+      "estrato": 3,
+      "estado_civil": "Casado(a)",
+      "eps": "Coomeva",
+      "contacto_emergencia": {
+        "nombre": "Andrea Gómez",
+        "telefono": "3009876543",
+        "parentesco": "Hija"
+      },
+      "formacion_academica": [],
+      "experiencia_laboral": [],
+      "habilidades_tecnicas": [],
+      "habilidades_blandas": [],
+      "idiomas": [],
+      "objetivos_profesionales": "",
+      "intereses": [],
+      "logros_reconocimientos": [],
+      "fecha_actualizacion": "2025-09-30"
+    },
+    {
+      "id": 4,
+      "usuario_id": 4,
+      "fecha_nacimiento": "1990-01-25",
+      "lugar_nacimiento": "Cali, Valle del Cauca",
+      "direccion": "Avenida Siempre Viva 123",
+      "estrato": 4,
+      "estado_civil": "Soltero(a)",
+      "eps": "SURA",
+      "contacto_emergencia": {
+        "nombre": "Juan Vargas",
+        "telefono": "3101234567",
+        "parentesco": "Hermano"
+      },
+      "formacion_academica": [
+        {
+          "institucion": "Universidad Javeriana",
+          "titulo": "Psicóloga",
+          "año_graduacion": 2012
+        }
+      ],
+      "experiencia_laboral": [],
+      "habilidades_tecnicas": [],
+      "habilidades_blandas": [],
+      "idiomas": [],
+      "objetivos_profesionales": "",
+      "intereses": [],
+      "logros_reconocimientos": [],
+      "fecha_actualizacion": "2025-09-30"
+    }
+  ],
+
+  "estudiantes": [
+    {
+      "usuario_id": 2,
+      "programa": "Desarrollo de Software",
+      "semestre": 5
+    }
+  ],
+
+  "familiares": [
+    {
+      "usuario_id": 3,
+      "parentesco": "Padre",
+      "estudiante_asociado_id": 2
+    }
+  ],
+
+  "profesionales": [
+    {
+      "usuario_id": 4,
+      "area_especialidad": "Psicología Educativa",
+      "titulo": "Psicóloga"
+    }
+  ],
+
+  "docentes": [
+    {
+      "usuario_id": 1,
+      "especialidad": "Desarrollo de Software",
+      "departamento": "Tecnología"
     }
   ],
 
