@@ -6,9 +6,9 @@
       "documento": "12345678",
       "correo": "jaime.zapata@cesde.edu.co",
       "contraseña": "hashed_password_123",
-      "tipo_usuario": "PROFESOR",
+      "rol": "profesor",
       "telefono": "3001234567",
-      "estado": "ACTIVO",
+      "estado": "activo",
       "fecha_registro": "2025-01-15"
     },
     {
@@ -17,9 +17,9 @@
       "documento": "87654321",
       "correo": "andrea.gomez@estudiante.edu.co",
       "contraseña": "hashed_password_456",
-      "tipo_usuario": "ESTUDIANTE",
+      "rol": "estudiante",
       "telefono": "3009876543",
-      "estado": "ACTIVO",
+      "estado": "activo",
       "fecha_registro": "2025-02-10"
     },
     {
@@ -28,9 +28,9 @@
       "documento": "11223344",
       "correo": "carlos.restrepo@familiar.co",
       "contraseña": "hashed_password_789",
-      "tipo_usuario": "FAMILIAR",
+      "rol": "familiar",
       "telefono": "3005566778",
-      "estado": "ACTIVO",
+      "estado": "activo",
       "fecha_registro": "2025-02-15"
     },
     {
@@ -39,9 +39,9 @@
       "documento": "55667788",
       "correo": "maria.vargas@cesde.edu.co",
       "contraseña": "hashed_password_321",
-      "tipo_usuario": "PROFESIONAL",
+      "rol": "profesional",
       "telefono": "3007788990",
-      "estado": "ACTIVO",
+      "estado": "activo",
       "fecha_registro": "2025-01-20"
     }
   ],
